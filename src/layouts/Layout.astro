@@ -9,15 +9,79 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta content="width=device-width, initial-scale=1.0" name="viewport">
-		<meta content="Welcome to XPORT LOGISTICS" name="description">
-		<meta content="Transport, Bangalore, Logistics, Roadlines, Roadways, Bengaluru, Heavy, Equipments" name="keywords">
-		<!-- Favicons -->
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+		<!-- Metadata and Character Encoding -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Welcome to XPORT LOGISTICS">
+		<meta name="keywords" content="Transport, Bangalore, Logistics, Road lines, Roadways, Bengaluru, Heavy, Equipments">
+		<meta name="author" content="XPORT LOGISTICS">
+		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#39312f">
+
+		<!-- Open Graph Meta Tags (for Social Media sharing) -->
+		<meta property="og:title" content="XPORT LOGISTICS">
+		<meta property="og:description" content="Welcome to XPORT LOGISTICS">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://www.xportlogistics.in">
+		<meta property="og:image" content="/favicon.svg">
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="">
+		<meta name="twitter:title" content="XPORT LOGISTICS">
+		<meta name="twitter:description" content="Welcome to XPORT LOGISTICS">
+		<meta name="twitter:image" content="/favicon.svg">
+		<meta name="twitter:site" content="">
+
+		<!-- Favicon and Touch Icons -->
+		<link rel="icon" href="/favicon.svg" type="image/x-icon">
 		<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+		<!-- For Progressive Web Apps -->
+		<link rel="manifest" href="manifest.json">
+
+		<!-- Canonical Link (for SEO) -->
+		<link rel="canonical" href="https://www.example.com">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles.css"> <!-- Main CSS file -->
+		<link rel="preload" href="fonts/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+		<!-- External Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Title of the Page -->
+		<title>{title}</title>
+
+		<!-- Link to Web App Manifest (PWA support) -->
+		<link rel="manifest" href="/manifest.json">
+		
+		<!-- Link to feed -->
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss-feed.xml">
+		
+		<!-- Preconnect for external resources to speed up loading -->
+		<link rel="preconnect" href="https://example-cdn.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+		<!-- Resource Hints -->
+		<link rel="dns-prefetch" href="//example-cdn.com">
+		<link rel="preload" href="styles.css" as="style">
+		<link rel="prefetch" href="future-page.html" as="document">
+
+		<!-- Meta tags for mobile view -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="XPORT LOGISTICS">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+		<!-- OpenSearch -->
+		<link rel="search" type="application/opensearchdescription+xml" title="XPORT LOGISTICS" href="opensearch.xml">
+		
+		<!-- Shortcut icon (older browsers) -->
+		<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+	
 		<!-- Vendor CSS Files -->
 		<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
 		<link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,11 +89,12 @@ const { title } = Astro.props;
 		<link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 		<link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 		<link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-		<!-- Template Main CSS File -->
 		<link href="/assets/css/style.css" rel="stylesheet">
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	  </head>
+	
 	<body>
 		<slot />
 	</body>
